@@ -1,0 +1,1 @@
+A simple website to search about a movie info

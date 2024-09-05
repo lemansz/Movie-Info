@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movieinfo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cantarell:i|Droid+Serif:b">
+</head>
+<body>
+    <h2>Enter a movie name to get info about the movie</h2>
+    <div class="query">
+        <input type="text" id="search_bar"  value="">
+        <button class="search" id="btn">Search</button>
+    </div>
+    <div class="container">
+       <h2 class="title" id="title"></h2>
+       <div class="poster" id="poster"></div> 
+       <div class="r-container"><span class="released" id="released"></span></div>
+       <p class="plot" id="plot"></p>
+
+       <span id="a-header" class="a-header">Actors</span>
+       <div id="actors"></div>
+
+
+       <div class="details">
+       <span id="genre"></span>
+       <br>
+       <span id="writer"></span>
+        </div>
+    
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+*{
+    font-family:Cantarell, serif, bold ;
+}
+body{
+    background-color: white;
+   
+}
+h2{
+    text-align: center;
+    color: black;
+}
+
+.query{
+    margin: auto;
+    margin-top: 1.25rem;
+    width: fit-content;
+    height: fit-content;
+}
+input{
+    padding: 5px;
+    border: 1px solid black;
+
+    
+}
+.search{
+    padding: 5px;
+    border: none;
+    background-color: hsl(160, 100%, 40%);
+
+}
+.search:active{
+    background-color: rgba(255, 255, 32, 0.664);
+}
+
+.container{
+    width: 60%;
+    height: 750px;
+    margin: auto;
+    margin-top: 2.5rem;
+    text-align: justify;
+    padding: 0.188rem;
+    border: 1px solid gray;
+    border-radius: 8px;
+}
+.title{
+    color: black;
+}
+.poster{
+    height: 400px;
+    width: 300px;
+    border: none;
+    margin: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 0.313rem;
+}
+.r-container{
+    height: fit-content;
+    text-align: center;
+}
+.plot{
+    text-align: center;
+    margin-bottom: 0.625rem;
+}
+.a-header{
+    display: none;
+    margin-left: 0.188rem;
+}
+.details{
+   
+    height: fit-content;
+    margin-top: 1.25rem;
+}
+
+
+@media screen and (min-width: 0rem) and (max-width: 48rem) {
+    .container{
+        min-width: 100%;
+        height: fit-content;
+        margin-left: 0;
+    }
+    body{
+        margin: 0;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
