@@ -9,18 +9,28 @@
 </head>
 <body>
     <h2>Enter a movie name to get info about the movie</h2>
-    <div class="query">
-        <input type="text" id="search_bar"  value="">
+    <div class="search-bar">
+        <input type="text" id="search_bar" placeholder="King Kong" value="">
         <button class="search" id="btn">Search</button>
     </div>
-    <div class="container">
-       <h2 class="title" id="title"></h2>
+
+    <div class="movie-not-found" id="movie-not-found">Sorry, could not retrieve movie. Try again.</div>
+    
+
+    <div class="container" id="container">
+        <div class="title">
+            <h2 id="title"></h2>
+        </div>
        <div class="poster" id="poster"></div> 
        <div class="r-container"><span class="released" id="released"></span></div>
-       <p class="plot" id="plot"></p>
+       <div class="plot">
+           <p id="plot"></p>
+       </div>
 
-       <span id="a-header" class="a-header">Actors</span>
-       <div id="actors"></div>
+       <div class="actors">
+           <span id="a-header" class="a-header">Actors</span>
+           <div id="actors"></div>
+       </div>
 
 
        <div class="details">
@@ -30,6 +40,7 @@
         </div>
     
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.2/color-thief.umd.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
