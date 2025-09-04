@@ -1,87 +1,163 @@
-*{
-    font-family:Cantarell, serif, bold ;
+
+* {
+    font-family: 'Inter', 'Roboto', 'Cantarell', 'Segoe UI', Arial, sans-serif;
+    box-sizing: border-box;
 }
-body{
-    background-color: white;
-   
+body {
+    background: linear-gradient(rgba(245,246,250,0.85), rgba(245,246,250,0.85)), url('background-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
 }
-h2{
+h2 {
     text-align: center;
-    color: black;
+    color: #222222;
+    font-size: 2rem;
+    margin-top: 2rem;
+    letter-spacing: 1px;
 }
-
-.query{
-    margin: auto;
-    margin-top: 1.25rem;
-    width: fit-content;
-    height: fit-content;
+.search-bar {
+    margin: 2rem auto 1.5rem auto;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    gap: 0.5rem;
+    background: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.07);
 }
-input{
-    padding: 5px;
-    border: 1px solid black;
-
-    
-}
-.search{
-    padding: 5px;
-    border: none;
-    background-color: hsl(160, 100%, 40%);
-
-}
-.search:active{
-    background-color: rgba(255, 255, 32, 0.664);
-}
-
-.container{
-    width: 60%;
-    height: 750px;
-    margin: auto;
-    margin-top: 2.5rem;
-    text-align: justify;
-    padding: 0.188rem;
-    border: 1px solid gray;
+input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
     border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+    background: #f9fafb;
+}
+input:focus {
+    border-color: #00b894;
+}
+.search {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #00b894 0%, #00cec9 100%);
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,184,148,0.08);
+    transition: background 0.2s, transform 0.1s;
+}
+.search:hover {
+    background: linear-gradient(90deg, #00cec9 0%, #00b894 100%);
+    transform: translateY(-2px) scale(1.03);
+}
+.search:active {
+    background: #fdcb6e;
+    color: #222;
+}
+.movie-not-found {
+    color: #d63031;
+    font-weight: 700;
+    display: none;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+.container {
+    width: 100%;
+    max-width: 700px;
+    min-height: 400px;
+    margin: 2.5rem auto;
+    text-align: left;
+    padding: 2rem 2.5rem;
+    border: none;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.09);
+    display: none;
 }
 .title{
-    color: black;
+    text-align: center;
+    margin-bottom: 0.8rem;
 }
-.poster{
-    height: 400px;
-    width: 300px;
-    border: none;
-    margin: auto;
+.title h2 {
+    color: #222;
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: #f9fafb;
+    border-radius: 10px;
+    display: inline;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+}
+.poster {
+    height: 340px;
+    width: 240px;
+    border-radius: 12px;
+    margin: 0 auto 1rem auto;
     background-size: cover;
     background-repeat: no-repeat;
-    margin-bottom: 0.313rem;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    display: block;
 }
-.r-container{
-    height: fit-content;
+
+.r-container {
     text-align: center;
+    margin-bottom: 1rem;
 }
-.plot{
+.released{
+    background: #f9fafb;
+    border-radius: 10px;
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+}
+.plot {
     text-align: center;
-    margin-bottom: 0.625rem;
+    background-color:#f9fafb;;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
 }
-.a-header{
+.a-header {
     display: none;
     margin-left: 0.188rem;
 }
-.details{
-   
-    height: fit-content;
-    margin-top: 1.25rem;
+.actors{
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: #f9fafb;
+    border-radius: 10px;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+}
+.details {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: #f9fafb;
+    border-radius: 10px;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.04);
 }
 
-
-@media screen and (min-width: 0rem) and (max-width: 48rem) {
-    .container{
-        min-width: 100%;
-        height: fit-content;
+@media screen and (max-width: 48rem) {
+    .container {
+        max-width: 100%;
+        padding: 1rem;
         margin-left: 0;
     }
-    body{
+    body {
         margin: 0;
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    .search-bar {
+        max-width: 100%;
+        padding: 1rem;
     }
 }
